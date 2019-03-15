@@ -29,12 +29,117 @@
 #index-logoname h2 {
     font-family: 'hwt-mardell', sans-serif;
     font-weight: 400;
-    font-size: 120px;
+    font-size: 104px;
     color: white;
 }
 
 #index-logoname p {
     font-family: 'Noto Sans JP', sans-serif;
     color: white;
+    font-size: 16px;
     padding-top: 24px;
+}
+
+
+
+
+/* ----- keywords ----- */
+#keywords-body {
+    background-color: #3D3D3D;
+}
+
+#keywords-header {
+    display: block;
+    top: 0;
+}
+
+#keywords-header-top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+#keywords-header-top-logo {
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'hwt-mardell', sans-serif;
+    padding-left: 32px;
+    font-size: 32px;
+    color: white;
+}
+
+#keywords-header-top-logoname {
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'hwt-mardell', sans-serif;
+    margin: auto;
+    font-size: 56px;
+    color: white;
+}
+
+#keywords-header-top span {
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 32px;
+    position: relative;
+    font-size: 32px;
+    color: white;
+}
+
+
+#keywords-header-bottom {
+    width: 400px;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+}
+
+#keywords-header-bottom p {
+    line-height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#keywords-header-bottom-text {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#keywords-header-border {
+    width: 95%;
+    border: 0.8px solid white;
+    margin: 24px auto;
+}
+
+#keywords-main-wrapper {
+    width: 95%;
+    height: auto;
+    margin: auto;
+}
+
+#keywords-main-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+#keywords-main-wrapper ul li {
+    width: auto;
+    line-height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 32px;
+    margin: 16px 16px;
 }
