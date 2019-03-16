@@ -44,8 +44,10 @@
 
 
 /* ----- keywords ----- */
+
 #keywords-body {
     background-color: #3D3D3D;
+    color: #FBFBFB;
 }
 
 #keywords-header {
@@ -66,7 +68,6 @@
     font-family: 'hwt-mardell', sans-serif;
     padding-left: 32px;
     font-size: 32px;
-    color: white;
 }
 
 #keywords-header-top-logoname {
@@ -76,7 +77,6 @@
     font-family: 'hwt-mardell', sans-serif;
     margin: auto;
     font-size: 56px;
-    color: white;
 }
 
 #keywords-header-top span {
@@ -86,7 +86,6 @@
     padding-right: 32px;
     position: relative;
     font-size: 32px;
-    color: white;
 }
 
 
@@ -97,7 +96,6 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    color: white;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
 }
@@ -138,8 +136,97 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    color: white;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 32px;
     margin: 16px 16px;
+}
+
+
+
+/* ----- navmenu ----- */
+
+#navmenu-body {
+    background-color: #FBFBFB;
+    color: #3D3D3D;
+}
+
+#navmenu-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#navmenu-header {
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#navmenu-header p {
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#navmenu-header span {
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 64px;
+    font-size: 40px;
+}
+
+#navmenu-header-logo {
+    padding-left: 64px;
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 32px;
+}
+
+#navmenu-header-logoname {
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 56px;
+}
+
+#navmenu-main {
+    display: flex;
+    margin: 104px auto;
+    justify-content: center
+}
+
+#navmenu-main-img {
+    width: 40%;
+    height: 500px;
+}
+
+#navmenu-main-text {
+    width: 40%;
+    height: 500px;
+    display: block;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 64px;
+}
+
+#navmenu-main-text ul li {
+    margin: 24px auto;
+}
+
+#navmenu-main-text-name {
+    margin: 48px auto 16px 24px;
+    font-size: 24px;
+}
+
+#navmenu-main-text ul li a {
+    color: #3D3D3D;
+}
+
+#navmenu-main-text-icon {
+    display: flex;
+    font-size: 48px;
+}
+
+#navmenu-main-text-icon span {
+    margin: 16px 40px;
 }
