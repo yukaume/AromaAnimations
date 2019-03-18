@@ -1,0 +1,50 @@
+body {
+    background-color: #3D3D3D;
+    color: #FBFBFB;
+}
+
+#random-wrpper {
+    position: relative;
+    overflow: visible;
+}
+
+#random-header p {
+    position: absolute;
+    left: 4%;
+    line-height: 80px;
+    vertical-align: middle;
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 32px;
+}
+
+#random-header span {
+    position: absolute;
+    right: 4%;
+    line-height: 80px;
+    vertical-align: middle;
+    font-size: 32px;
+}
+
+#random-boxwrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    display: grid;
+    grid-template-rows: repeat(auto, 172px);
+    grid-template-columns: repeat(8, 172px);
+    grid-gap: 8px;
+}
+
+#random-boxwrapper div {
+    text-align: center;
+    line-height: 172px;
+    vertical-align: middle;
+    border: 1px solid;
+}
+
+#box12 {
+    grid-row: span 2;
+    grid-column: span 2;
+    line-height: 344px;
+}
