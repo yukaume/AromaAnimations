@@ -1,0 +1,29 @@
+body {
+    background-color: #FCF8F0;
+}
+
+#sandalwood {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FCF8F0;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    background-color: #A6804B;
+    border: 2.5px solid #4D3617;
+    border-radius: 50%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #4D4D26;
+}

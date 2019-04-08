@@ -1,0 +1,30 @@
+body {
+    background-color: #FFFEF7;
+}
+
+#passionfruit {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFFEF7;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    background-color: #FFEB66;
+    border: 1px solid #BF6460;
+    border-radius: 50%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #8C221C;
+    border-radius: 50%;
+}

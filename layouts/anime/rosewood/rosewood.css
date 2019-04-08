@@ -1,0 +1,26 @@
+body {
+    background-color: #FFF7F5;
+}
+
+#rosewood {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFF7F5;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+}

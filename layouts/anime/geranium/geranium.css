@@ -1,0 +1,19 @@
+body {
+    background-color: #FFF7F7;
+}
+
+#geranium {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFF7F7;
+    margin: 3% auto;
+}
+
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+}

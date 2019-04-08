@@ -1,0 +1,40 @@
+body {
+    background-color: #FAF2ED;
+}
+
+#chocolate {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FAF2ED;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    background-color: #4D301C;
+    border: 1.5px solid #B3A496;
+    border-radius: 50%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #925B0F;
+    border-radius: 50%;
+}
+
+.items2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    background-color: #925B0F;
+    border: 1px solid #ff9f1a;
+    border-radius: 50%;
+}

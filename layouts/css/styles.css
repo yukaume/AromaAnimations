@@ -1,12 +1,18 @@
 /* ----- index.html ----- */
+
+body {}
+
+#index-wrapper {
+    background-color: #FBFBFB;
+    width: 100%;
+    height: 100vh;
+    ;
+}
+
 #index-main {
-    /* margin: auto;
-    text-align: center; */
     width: 100%;
     height: 100%;
-    /* position: relative; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -24,27 +30,179 @@
 #index-logoname {
     margin: auto;
     text-align: center;
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
-    /* -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
 }
 
 #index-logoname h2 {
     font-family: 'hwt-mardell', sans-serif;
     font-weight: 400;
-    font-size: 104px;
-    color: white;
+    font-size: 96px;
+    color: #FBFBFB;
+    -webkit-text-stroke: 0.5px #3D3D3D;
 }
 
 #index-logoname p {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-    font-size: 16px;
-    padding-top: 24px;
+    font-family: 'hwt-mardell', sans-serif;
+    color: #FBFBFB;
+    font-size: 24px;
+    padding-top: 32px;
+    -webkit-text-stroke: 0.5px #3D3D3D;
 }
+
+/* ----- navmenu ----- */
+
+
+#navmenu {
+    position: absolute;
+    z-index: 10;
+    background-color: #FBFBFB;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    left: 100%;
+}
+
+#navmenu-header {
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+
+#navmenu-header-logo {
+    position: absolute;
+    top: 0;
+    left: 4%;
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 32px;
+}
+
+.header-logo {
+    color: #3D3D3D;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 32px;
+}
+
+.fa-times-circle {
+    font-size: 48px;
+}
+
+#navmenu.js-isOpen {
+    left: 0%;
+    top: 0%;
+}
+
+#navmenu.js-isClose {
+    left: 100%;
+    top: 0%;
+}
+
+#navmenu-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#navmenu-main {
+    display: flex;
+    margin: 4% auto;
+    justify-content: center
+}
+
+#navmenu-main-img {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+
+#navmenu-main-text {
+    width: 90%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 32px;
+    margin: auto;
+    color: #3D3D3D
+}
+
+#navmenu-main-text ul {
+    width: 80%;
+}
+
+#navmenu-main-text ul li {
+    margin: 24px auto;
+    color: #3D3D3D
+}
+
+
+#navmenu-main-text ul li a {
+    color: #3D3D3D;
+}
+
+#navmenu-main-text-icon {
+    display: flex;
+    font-size: 48px;
+    width: 80%;
+}
+
+#navmenu-main-text-icon span {
+    color: #3D3D3D;
+    padding-right: 10%;
+}
+
+#navmenu-main-text-icon .nav-icons {
+    color: #3D3D3D;
+}
+
+#navmenu-main-text .navmenu-main-logo {
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 64px;
+    padding-bottom: 24px;
+}
+
+#navmenu-main-text .navmenu-main-name {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    /* padding-left: 15%; */
+}
+
+#navmenu-main-text .navmenu-main-menu {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* padding-left: 15%; */
+}
+
+#navmenu-header span {
+    position: absolute;
+    right: 4%;
+    top: 6%;
+    line-height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 32px;
+}
+
+
+.nav-icon {
+    position: fixed;
+    top: 3%;
+    right: 3.2%;
+    color: #3D3D3D;
+    font-size: 24px;
+    filter: drop-shadow(1px 2px 1px #3D3D3D);
+    cursor: pointer;
+}
+
 
 
 
@@ -54,6 +212,10 @@
 #keywords-body {
     background-color: #3D3D3D;
     color: #FBFBFB;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 #keywords-header {
@@ -75,7 +237,7 @@
     vertical-align: middle;
     font-family: 'hwt-mardell', sans-serif;
     position: absolute;
-    left: 32px;
+    left: 4%;
     font-size: 32px;
 }
 
@@ -98,9 +260,10 @@
     display: table-cell;
     vertical-align: middle;
     position: absolute;
-    right: 32px;
+    right: 4%;
     font-size: 32px;
     text-align: right;
+    cursor: pointer;
 }
 
 
@@ -109,7 +272,7 @@
     height: 5%;
     margin: auto;
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     text-align: -webkit-center;
 }
 
@@ -121,6 +284,11 @@
 
 #keywords-header-bottom p span {
     font-size: 12px;
+    cursor: pointer;
+}
+
+#keywords-header-bottom p a {
+    color: #FBFBFB;
 }
 
 #keywords-header-bottom-left {
@@ -134,14 +302,14 @@
 }
 
 #keywords-header-border {
-    width: 95%;
+    width: 100%;
     border: 0.8px solid white;
-    margin: 24px auto;
+    margin: 12px auto 24px;
 }
 
 #keywords-main-wrapper {
-    width: 95%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     margin: auto;
 }
 
@@ -154,13 +322,13 @@
 
 #keywords-main-wrapper ul li {
     width: auto;
-    line-height: 40px;
+    line-height: 44px;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 32px;
-    margin: 16px 16px;
+    font-family: 'hwt-mardell', 'Nico Moji', sans-serif;
+    font-size: 44px;
+    margin: 16px 24px;
 }
 
 #keywords-main-wrapper ul li a {
@@ -171,102 +339,6 @@
     font-size: 24px;
 }
 
-
-/* ----- navmenu ----- */
-
-#navmenu-body {
-    background-color: #FBFBFB;
-    color: #3D3D3D;
-}
-
-#navmenu-wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-#navmenu-header {
-    display: flex;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    margin: auto;
-    position: relative;
-}
-
-#navmenu-header-logo {
-    position: absolute;
-    top: 0;
-    left: 4%;
-    line-height: 80px;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'hwt-mardell', sans-serif;
-    font-size: 32px;
-}
-
-#navmenu-header-logoname {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    line-height: 80px;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'hwt-mardell', sans-serif;
-    font-size: 56px;
-}
-
-#navmenu-header span {
-    position: absolute;
-    top: 0;
-    right: 4%;
-    line-height: 80px;
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 32px;
-}
-
-#navmenu-main {
-    display: flex;
-    margin: 104px auto;
-    justify-content: center
-}
-
-#navmenu-main-img {
-    width: 36%;
-    height: 500px;
-}
-
-#navmenu-main-text {
-    width: 36%;
-    height: 500px;
-    display: block;
-    text-align: left;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 64px;
-}
-
-#navmenu-main-text ul li {
-    margin: 24px auto;
-}
-
-#navmenu-main-text-name {
-    margin: 48px auto 16px 24px;
-    font-size: 24px;
-}
-
-#navmenu-main-text ul li a {
-    color: #3D3D3D;
-}
-
-#navmenu-main-text-icon {
-    display: flex;
-    font-size: 48px;
-}
-
-#navmenu-main-text-icon span {
-    margin: 16px 40px;
-}
 
 
 /*  ------ category ------ */
@@ -354,4 +426,151 @@
     vertical-align: middle;
     padding-right: 64px;
     font-size: 32px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #index-img {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/index-main.JPG);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        align-items: center;
+    }
+
+    #index-logoname h2 {
+        font-family: 'hwt-mardell', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        color: #FBFBFB;
+        -webkit-text-stroke: 1px #3D3D3D;
+    }
+
+    #index-logoname p {
+        font-family: 'hwt-mardell', sans-serif;
+        color: #FBFBFB;
+        font-size: 20px;
+        padding-top: 24px;
+        -webkit-text-stroke: 1px #3D3D3D;
+    }
+
+    #navmenu-header-logoname {
+        display: none;
+    }
+
+    #navmenu-main-img {
+        display: none;
+    }
+
+    #navmenu-main-text {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: left;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 32px;
+        margin: 15% auto;
+        text-align: center;
+        color: #3D3D3D;
+    }
+
+    #navmenu-main-text ul {
+        width: 100%;
+    }
+
+    #navmenu-main-text .navmenu-main-logo {
+        font-family: 'hwt-mardell', sans-serif;
+        font-size: 36px;
+        padding-bottom: 16px;
+        color: #3D3D3D;
+    }
+
+    #navmenu-main-text .navmenu-main-name {
+        font-size: 16px;
+        /* padding-top: 40px; */
+        color: #3D3D3D;
+    }
+
+    #navmenu-main-text .navmenu-main-menu {
+        padding-bottom: 8px;
+        color: #3D3D3D;
+    }
+
+    #navmenu-header {
+        display: flex;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        margin: auto;
+        position: relative;
+    }
+
+    #navmenu-main-text-icon {
+        display: flex;
+        font-size: 48px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #navmenu-main-text-icon span {
+        padding: 5%;
+    }
+
+
+
+    #keywords-body {
+        background-color: #3D3D3D;
+        color: #FBFBFB;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #keywords-header-top-logoname {
+        display: none;
+    }
+
+    #keywords-header-top-logo {
+        line-height: 80px;
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'hwt-mardell', sans-serif;
+        position: absolute;
+        left: 4%;
+        font-size: 24px;
+    }
+
+    #keywords-header-top span {
+        line-height: 80px;
+        display: table-cell;
+        vertical-align: middle;
+        position: absolute;
+        right: 4%;
+        font-size: 32px;
+        text-align: right;
+    }
+
+    #keywords-header-bottom {
+        display: none;
+    }
+
+    #keywords-header-border {
+        width: 100%;
+        border: 0.8px solid white;
+        margin: 12px auto 16px;
+    }
+
+    #keywords-main-wrapper ul li {
+        line-height: 40px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-family: 'hwt-mardell', 'Nico Moji', sans-serif;
+        font-size: 40px;
+        margin: 12px 12px;
+    }
+
 }

@@ -1,0 +1,32 @@
+body {
+    background-color: #FEFFF2;
+}
+
+#tuberose {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FEFFF2;
+    margin: 5% auto;
+}
+
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border: 0.5px solid #EEFF00;
+    background-color: #FFECA6;
+    border-radius: 40%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border: 0.5px solid #FFD84D;
+    background-color: #F9FFA6;
+    border-radius: 50%;
+}

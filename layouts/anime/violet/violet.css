@@ -1,0 +1,19 @@
+body {
+    background-color: #EFEDFF;
+}
+
+#violette {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #EFEDFF;
+    margin: 5% auto;
+}
+
+
+.gvItems {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+}

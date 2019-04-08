@@ -1,0 +1,19 @@
+body {
+    background-color: #FEFFF7;
+}
+
+#immortelle {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FEFFF7;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ff9f1a;
+}

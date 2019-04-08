@@ -1,0 +1,11 @@
+body {
+    background-color: #FCF8F0;
+}
+
+#mimosa {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FCF8F0;
+    margin: 5% auto;
+}

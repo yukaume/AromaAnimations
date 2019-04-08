@@ -1,0 +1,31 @@
+body {
+    background-color: #FFFDF2;
+}
+
+#lily {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFFDF2;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    background-color: #FFE0E6;
+    border: 2px solid #FF6680;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    background-color: #FFE561;
+    border: 2px solid #FFF9D9;
+    border-radius: 50%;
+    z-index: 1;
+}

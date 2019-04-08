@@ -1,0 +1,43 @@
+body {
+    background-color: #FFEDED;
+}
+
+#rose {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFEDED;
+    margin: 5% auto;
+}
+
+
+.seed {
+    position: absolute;
+    margin: 0 auto;
+    width: 10px;
+    height: 10px;
+}
+
+.grItems {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FF6666;
+}
+
+.grItems1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FFB3B3;
+}
+
+.grItems2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FFF266;
+}

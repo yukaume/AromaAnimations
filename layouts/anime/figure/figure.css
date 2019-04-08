@@ -1,0 +1,35 @@
+body {
+    background-color: #F2EBEB;
+}
+
+#figure {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #F2EBEB;
+    margin: 5% auto;
+}
+
+.gnItems {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.gnItems1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.gnItems2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}

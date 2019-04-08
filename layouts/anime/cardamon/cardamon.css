@@ -1,0 +1,25 @@
+body {
+    background-color: #FFFFF2;
+}
+
+#cardamon {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFFFF2;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+}

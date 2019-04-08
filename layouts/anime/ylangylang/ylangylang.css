@@ -1,0 +1,41 @@
+body {
+    background-color: #FFEC8C;
+}
+
+#ylangylang {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFEC8C;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #E6BF00;
+    background-color: #FFFEFA;
+    border-radius: 50%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #FFFF00;
+    background-color: #FFFFDE;
+    border-radius: 0%;
+}
+
+.items2 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #CCCC00;
+    background-color: #FFF1C7;
+    border-radius: 30%;
+}

@@ -1,50 +1,550 @@
 body {
     background-color: #3D3D3D;
-    color: #FBFBFB;
+    width: 100%;
+    height: 100vh;
 }
 
 #random-wrpper {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
 }
 
-#random-header p {
+.main-header {
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: 80px;
+    font-family: 'hwt-mardell', sans-serif;
+    z-index: 1;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    vertical-align: center;
+}
+
+.header-logo {
+    position: fixed;
+    top: 3%;
+    left: 3.3%;
+    font-size: 20px;
+    font-family: 'hwt-mardell', sans-serif;
+    color: #FBFBFB;
+    background-color: #3D3D3D;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    width: 100px;
+    height: 48px;
+    justify-content: center;
+    filter: drop-shadow(3px 2px 3px #3D3D3D);
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.header-icon {
+    position: fixed;
+    top: 3%;
+    right: 3.5%;
+    color: #FBFBFB;
+    font-size: 24px;
+    background-color: #3D3D3D;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    filter: drop-shadow(3px 2px 3px #3D3D3D);
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.header-icon i {
+    width: 100%;
+    text-align: center;
+}
+
+#navmenu {
     position: absolute;
+    z-index: 10;
+    background-color: #FBFBFB;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    left: 100%;
+}
+
+#navmenu-header {
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    /* margin: auto; */
+    position: relative;
+}
+
+#navmenu-header-logo {
+    position: absolute;
+    top: 0;
     left: 4%;
     line-height: 80px;
+    display: table-cell;
     vertical-align: middle;
     font-family: 'hwt-mardell', sans-serif;
     font-size: 32px;
 }
 
-#random-header span {
+.fa-times-circle {
+    font-size: 48px;
+}
+
+#navmenu.js-isOpen {
+    left: 0%;
+}
+
+#navmenu.js-isClose {
+    left: 100%;
+
+}
+
+#navmenu-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#navmenu-main {
+    display: flex;
+    margin: 4% auto;
+    justify-content: center
+}
+
+#navmenu-main-img {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+
+#navmenu-main-text {
+    width: 90%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 32px;
+    margin: auto;
+    color: #3D3D3D
+}
+
+#navmenu-main-text ul {
+    width: 80%;
+}
+
+#navmenu-main-text ul li {
+    margin: 24px auto;
+    color: #3D3D3D
+}
+
+
+#navmenu-main-text ul li a {
+    color: #3D3D3D;
+}
+
+#navmenu-main-text-icon {
+    display: flex;
+    font-size: 48px;
+    width: 80%;
+}
+
+#navmenu-main-text-icon span {
+    color: #3D3D3D;
+    padding-right: 10%;
+}
+
+#navmenu-main-text-icon .nav-icons {
+    color: #3D3D3D;
+}
+
+#navmenu-main-text .navmenu-main-logo {
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 64px;
+    padding-bottom: 24px;
+}
+
+#navmenu-main-text .navmenu-main-name {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    /* padding-left: 15%; */
+}
+
+#navmenu-main-text .navmenu-main-menu {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* padding-left: 15%; */
+}
+
+#navmenu-header span {
     position: absolute;
     right: 4%;
+    top: 6%;
     line-height: 80px;
+    display: table-cell;
     vertical-align: middle;
     font-size: 32px;
 }
 
-#random-boxwrapper {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    display: grid;
-    grid-template-rows: repeat(auto, 172px);
-    grid-template-columns: repeat(8, 172px);
-    grid-gap: 8px;
+
+.nav-icon {
+    position: fixed;
+    top: 3%;
+    right: 3.2%;
+    color: #3D3D3D;
+    font-size: 24px;
+    filter: drop-shadow(1px 2px 1px #3D3D3D);
+    cursor: pointer;
 }
 
-#random-boxwrapper div {
+.js-gridWrapper {
+    display: grid;
+    grid-template-rows: 172px;
+    grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+    grid-gap: 8px;
+    z-index: 0;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.grid-item {
     text-align: center;
-    line-height: 172px;
     vertical-align: middle;
     border: 1px solid;
+    background-color: #FBFBFB;
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 32px;
+    color: #3D3D3D;
 }
 
-#box12 {
-    grid-row: span 2;
+.small-grid-item {
+    background-color: #FBFBFB;
+    color: #3D3D3D;
+    line-height: 172px;
+}
+
+.small-grid-item a {
+    background-color: rgba(255, 255, 255, 0);
+    color: #3D3D3D;
+}
+
+.grid-menu {
+    background-color: #3D3D3D;
+    color: #FBFBFB;
+    border: none;
+    font-size: 16px;
+}
+
+.grid-menu p a {
+    background-color: #3D3D3D;
+    color: #FBFBFB;
+
+}
+
+#lemon:hover {
+    background: url("../anime/lemon/lemon.gif");
+    background-size: cover;
+}
+
+#pinkpepper:hover {
+    background: url("../anime/pinkpepper/pinkpepper.gif");
+    background-size: cover;
+}
+
+#peach:hover {
+    background: url("../anime/peach/peach.gif");
+    background-size: cover;
+}
+
+#grapefruit:hover {
+    background: url("../anime/grapefruit/grapefruit.gif");
+    background-size: cover;
+}
+
+#rose:hover {
+    background: url("../anime/rose/rose.gif");
+    background-size: cover;
+}
+
+#magnolia:hover {
+    background: url("../anime/magnolia/magno.gif");
+    background-size: cover;
+}
+
+#violet:hover {
+    background: url("../anime/violet/violet.gif");
+    background-size: cover;
+}
+
+#basil:hover {
+    background: url("../anime/basil/basil.gif");
+    background-size: cover;
+}
+
+#honeysuckle:hover {
+    background: url("../anime/honeysuckle/honeysuckle.gif");
+    background-size: cover;
+}
+
+#vanilla:hover {
+    background: url("../anime/vanilla/vanilla.gif");
+    background-size: cover;
+}
+
+#aromaanimations:hover {
+    background-color: #FBFBFB;
+    color: #3D3D3D;
+}
+
+#figure:hover {
+    background: url("../anime/figure/figure.gif");
+    background-size: cover;
+}
+
+#cardamon:hover {
+    background: url("../anime/cardamon/cardamon.gif");
+    background-size: cover;
+}
+
+#clove:hover {
+    background: url("../anime/clove/clove.gif");
+    background-size: cover;
+}
+
+#geranium:hover {
+    background: url("../anime/geranium/geranium.gif");
+    background-size: cover;
+}
+
+#patchouli:hover {
+    background: url("../anime/patchouli/patchouli.gif");
+    background-size: cover;
+}
+
+
+#whitemusk:hover {
+    background: url("../anime/whitemusk/whitemusk.gif");
+    background-size: cover;
+}
+
+#jasmine:hover {
+    background: url("../anime/jasmine/jasmin.gif");
+    background-size: cover;
+}
+
+#oakmoss:hover {
+    background: url("../anime/oakmoss/oakmoss.gif");
+    background-size: cover;
+}
+
+#saffron:hover {
+    background: url("../anime/saffron/saffron.gif");
+    background-size: cover;
+}
+
+#neroli:hover {
+    background: url("../anime/neroli/neroli.gif");
+    background-size: cover;
+}
+
+#blackpepper:hover {
+    background: url("../anime/blackpepper/blackpepper.gif");
+    background-size: cover;
+}
+
+#ylangylang:hover {
+    background: url("../anime/ylangylang/ylangylang.gif");
+    background-size: cover;
+}
+
+#lime:hover {
+    background: url("../anime/lime/lime.gif");
+    background-size: cover;
+}
+
+#tuberose:hover {
+    background: url("../anime/tuberose/tuberose.gif");
+    background-size: cover;
+}
+
+#immortelle:hover {
+    background: url("../anime/immortelle/immortelle.gif");
+    background-size: cover;
+}
+
+#sage:hover {
+    background: url("../anime/sage/sage.gif");
+    background-size: cover;
+}
+
+#raspberry:hover {
+    background: url("../anime/raspberry/raspberry.gif");
+    background-size: cover;
+}
+
+#lavender:hover {
+    background: url("../anime/lavender/lavender.gif");
+    background-size: cover;
+}
+
+#passionfruit:hover {
+    background: url("../anime/passionfruit/passionfruit.gif");
+    background-size: cover;
+}
+
+#chocolate:hover {
+    background: url("../anime/chocolate/chocolate.gif");
+    background-size: cover;
+}
+
+#fennel:hover {
+    background: url("../anime/fennel/fennel.gif");
+    background-size: cover;
+}
+
+#orange:hover {
+    background: url("../anime/orange/orange.gif");
+    background-size: cover;
+}
+
+#sandalwood:hover {
+    background: url("../anime/sandalwood/sandalwood.gif");
+    background-size: cover;
+}
+
+#lily:hover {
+    background: url("../anime/lily/lily.gif");
+    background-size: cover;
+}
+
+#iris:hover {
+    background: url("../anime/iris/iris.gif");
+    background-size: cover;
+}
+
+#cinnammon:hover {
+    background: url("../anime/cinnammon/cinnammon.gif");
+    background-size: cover;
+}
+
+#rosewood:hover {
+    background: url("../anime/rosewood/rosewood.gif");
+    background-size: cover;
+}
+
+#vetiver:hover {
+    background: url("../anime/vetiver/vetiver.gif");
+    background-size: cover;
+}
+
+#bergamot:hover {
+    background: url("../anime/bergamot/bergamot.gif");
+    background-size: cover;
+}
+
+#cedarwood:hover {
+    background: url("../anime/cedarwood/cedarwood.gif");
+    background-size: cover;
+}
+
+#blackcurrant:hover {
+    background: url("../anime/blackcurrant/blackcurrant.gif");
+    background-size: cover;
+}
+
+.fa-twitter-square {
+    color: #FBFBFB;
+    font-size: 32px;
+}
+
+.fa-facebook-square {
+    color: #FBFBFB;
+    font-size: 32px;
+}
+
+.fa-instagram {
+    color: #FBFBFB;
+    font-size: 32px;
+}
+
+.main-footer {
     grid-column: span 2;
-    line-height: 344px;
+    font-size: 8px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    /* スマホ用のCSS */
+    #navmenu-header-logoname {
+        display: none;
+    }
+
+    #navmenu-main-img {
+        display: none;
+    }
+
+    #navmenu-main-text {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: left;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 32px;
+        margin: 15% auto;
+        text-align: center;
+        color: #3D3D3D;
+    }
+
+    #navmenu-main-text ul {
+        width: 100%;
+    }
+
+    #navmenu-main-text .navmenu-main-logo {
+        font-family: 'hwt-mardell', sans-serif;
+        font-size: 36px;
+        padding-bottom: 32px;
+        color: #3D3D3D;
+    }
+
+    #navmenu-main-text .navmenu-main-name {
+        font-size: 16px;
+        padding-top: 40px;
+        color: #3D3D3D;
+    }
+
+    #navmenu-main-text .navmenu-main-menu {
+        padding-bottom: 24px;
+        color: #3D3D3D;
+    }
+
+    #navmenu-header {
+        display: flex;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        margin: auto;
+        position: relative;
+    }
+
+    #navmenu-main-text-icon {
+        display: flex;
+        font-size: 48px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #navmenu-main-text-icon span {
+        padding: 5%;
+    }
+
+
+
 }

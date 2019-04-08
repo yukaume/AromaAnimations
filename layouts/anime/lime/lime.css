@@ -1,0 +1,28 @@
+body {
+    background-color: #FAFFF2;
+}
+
+#lime {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FAFFF2;
+    margin: 5% auto;
+}
+
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 0%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}

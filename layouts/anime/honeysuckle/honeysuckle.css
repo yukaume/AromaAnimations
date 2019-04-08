@@ -1,0 +1,30 @@
+body {
+    background-color: #FFFBEB;
+}
+
+#honeysuckle {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #FFFBEB;
+    margin: 5% auto;
+}
+
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0.5px solid #DFB3FF;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0.5px solid #FFE380;
+}

@@ -1,0 +1,31 @@
+body {
+    background-color: #F2F2FF;
+}
+
+#blackpepper {
+    position: relative;
+    width: 80%;
+    height: 95vh;
+    background-color: #F2F2FF;
+    margin: 5% auto;
+}
+
+.items {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #262626;
+    background-color: #B3B3B3;
+    border-radius: 50%;
+}
+
+.items1 {
+    position: absolute;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4D4D4D;
+    background-color: #B3B3B3;
+    border-radius: 50%;
+}
