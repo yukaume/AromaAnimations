@@ -29,6 +29,7 @@ var tl = anime.timeline({
 tl.add({
         targets: '.items',
         duration: 800,
+        easing: 'easeInCubic',
         translateX: [
             wrapperWidth / 2 - itemsWidth / 2,
             wrapperWidth / 2 - itemsWidth / 2
@@ -37,13 +38,13 @@ tl.add({
             wrapperHeight / 2 - itemsHeight / 2,
             wrapperHeight / 2 - itemsHeight / 2
         ],
-        scale: anime.stagger([1, 10]),
-        rotateZ: anime.stagger([10, 540])
-    })
+        scale: anime.stagger([0.5, 5]),
+        rotateZ: anime.stagger([-540, 540])
+    }, 0)
     .add({
-        targets: '.items1',
-        duration: 1200,
-        easing: 'easeInSine',
+        targets: '.items',
+        duration: 800,
+        easing: 'easeInCubic',
         translateX: [
             wrapperWidth / 2 - itemsWidth / 2,
             wrapperWidth / 2 - itemsWidth / 2
@@ -52,21 +53,22 @@ tl.add({
             wrapperHeight / 2 - itemsHeight / 2,
             wrapperHeight / 2 - itemsHeight / 2
         ],
-        scale: anime.stagger([1, 10]),
-        rotateZ: anime.stagger([10, 540])
+        scale: anime.stagger([0.5, 5]),
+        rotateZ: anime.stagger([10, 1080])
     })
     .add({
-        targets: '.items,.items1',
+        targets: '.items',
+        easing: 'easeInCubic',
         duration: 1500,
         delay: anime.stagger(8),
-        rotateZ: 2000,
+        rotateZ: 1200,
         scale: function () {
-            return anime.random(1, 3.5);
+            return anime.random(0.5, 2.5);
         }
     })
     .add({
-        targets: '.items,.items1',
-        rotateZ: anime.stagger([10, 540]),
+        targets: '.items',
+        rotateZ: 540,
         duration: 1000,
         opacity: [1, 0],
         scale: [10, 0],

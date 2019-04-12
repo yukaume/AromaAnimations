@@ -26,56 +26,79 @@ var tl = anime.timeline({
 });
 tl.add({
             targets: '.items',
-            duration: 600,
+            duration: 1,
             easing: 'easeInCubic',
-            translateX: anime.stagger([itemsWidth * 2, wrapperWidth - itemsWidth * 2]),
-            translateY: anime.stagger([itemsHeight * 2, wrapperHeight - itemsHeight * 2]),
+            translateX: function () {
+                return anime.random(0, wrapperWidth - itemsWidth)
+            },
+            translateY: function () {
+                return anime.random(0, wrapperHeight - itemsHeight)
+            },
             opacity: 0.8,
+            scale: 0.5
         },
         0
     )
     .add({
             targets: '.items1',
+            duration: 1,
             easing: 'easeInCubic',
-            duration: 600,
-            translateX: anime.stagger([itemsWidth * 2, wrapperWidth - itemsWidth * 2]),
-            translateY: anime.stagger([itemsHeight * 2, wrapperHeight - itemsHeight * 2]),
-            opacity: 0.8,
+            translateX: function () {
+                return anime.random(0, wrapperWidth - itemsWidth)
+            },
+            translateY: function () {
+                return anime.random(0, wrapperHeight - itemsHeight)
+            },
+            opacity: 0.9,
+            scale: 0.5
         },
         0
-    )
+    ).add({
+        targets: '.items,.items1',
+        duration: 600,
+        easing: 'easeOutCubic',
+        opacity: 0.9,
+        scale: 1.5
+    }).add({
+        targets: '.items,.items1',
+        duration: 300,
+        easing: 'easeOutCubic',
+        opacity: 0.5,
+        scale: 0.5
+    }).add({
+        targets: '.items,.items1',
+        duration: 800,
+        easing: 'easeOutCubic',
+        translateX: function () {
+            return anime.random(0, wrapperWidth - itemsWidth)
+        },
+        translateY: function () {
+            return anime.random(0, wrapperHeight - itemsHeight)
+        },
+        opacity: 0.9,
+        scale: 2.5
+    })
     .add({
         targets: '.items,.items1',
         duration: 600,
-        easing: 'easeOutQuart',
-        translateX: anime.stagger([itemsWidth * 2, wrapperWidth - itemsWidth * 2]),
-        translateY: anime.stagger([itemsHeight * 2, wrapperHeight - itemsHeight * 2])
-    })
-    .add({
+        easing: 'easeOutCubic',
+        opacity: 1,
+        scale: 2.5,
+        filter: {
+            value: 'blur(10px)',
+            delay: 400
+        }
+    }).add({
         targets: '.items,.items1',
-        duration: 1200,
-        easing: 'easeInQuart',
-        translateX: wrapperWidth / 2 - itemsWidth / 2,
-        translateY: wrapperHeight / 2 - itemsHeight / 2
-    })
-    .add({
-        targets: '.items,.items1',
-        easing: 'easeInCubic',
-        duration: 1500,
+        duration: 1000,
+        easing: 'easeOutCubic',
         translateX: function () {
-            return anime.random(itemsWidth * 2, wrapperWidth - itemsWidth * 2);
+            return anime.random(0, wrapperWidth - itemsWidth)
         },
         translateY: function () {
-            return anime.random(itemsHeight * 2, wrapperHeight - itemsHeight * 2);
+            return anime.random(0, wrapperHeight - itemsHeight)
         },
-        scale: function () {
-            return anime.random(0.5, 3)
-        },
-        opacity: 0.8,
+        opacity: 0,
+        scale: 0,
+        filter: 'blur(0px)'
     })
-    .add({
-        targets: '.items,.items1',
-        duration: 800,
-        filter: 'blur(5px)',
-        opacity: 0
-    });

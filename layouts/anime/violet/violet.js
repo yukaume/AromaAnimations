@@ -90,19 +90,22 @@ anime
         targets: '.gvItems',
         easing: 'easeOutExpo',
         duration: 800,
-        scale: 6,
+        scale: 1.5,
         borderRadius: '0%',
         translateX: function () {
             return anime.random(itemsWidth * 3, wrapperWidth - itemsWidth * 3);
         },
         translateY: function () {
-            return anime.random(itemsHeight * 3, wrapperHeight - itemsHeight * 3);
-        }
+            return anime.random(itemsHeight * 2, wrapperHeight - itemsHeight * 2);
+        },
+        rotateZ: anime.stagger([10, 360])
     })
     .add({
         targets: '.gvItems',
         easing: 'easeOutExpo',
         duration: 800,
-        scale: 7,
-        opacity: 0
+        scale: 5,
+        opacity: 0,
+        rotateZ: anime.stagger([-360, 360])
+
     });

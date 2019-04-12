@@ -476,13 +476,30 @@ body {
 
 .main-footer {
     grid-column: span 2;
-    font-size: 8px;
+    font-size: 13px;
 }
 
 
 @media screen and (max-width: 1024px) {
 
     /* スマホ用のCSS */
+
+    .header-icon {
+        position: fixed;
+        top: 3%;
+        right: 3.5%;
+        color: #FBFBFB;
+        font-size: 24px;
+        background-color: #575757;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        filter: drop-shadow(3px 2px 3px #3D3D3D);
+        align-items: center;
+        display: inline-flex;
+        cursor: pointer;
+    }
+
     #navmenu-header-logoname {
         display: none;
     }
@@ -498,7 +515,7 @@ body {
         text-align: left;
         font-family: 'Noto Sans JP', sans-serif;
         font-size: 32px;
-        margin: 15% auto;
+        margin: 10% auto;
         text-align: center;
         color: #3D3D3D;
     }
@@ -516,7 +533,7 @@ body {
 
     #navmenu-main-text .navmenu-main-name {
         font-size: 16px;
-        padding-top: 40px;
+        /* padding-top: 40px; */
         color: #3D3D3D;
     }
 
@@ -542,7 +559,7 @@ body {
     }
 
     #navmenu-main-text-icon span {
-        padding: 5%;
+        padding: 0% 7%;
     }
 
 

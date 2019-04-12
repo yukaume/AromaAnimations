@@ -1,3 +1,4 @@
+//ハンバーガーメニューのjs
 const menuButton = document.querySelector('.header-icon');
 const navMenu = document.querySelector('#navmenu');
 const navIcon = document.querySelector('.nav-icon');
