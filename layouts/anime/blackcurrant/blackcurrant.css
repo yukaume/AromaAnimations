@@ -4,24 +4,24 @@ body {
 
 #blackcurrant {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 95%;
+    height: 100vh;
     background-color: #FFF5F7;
-    margin: 5% auto;
+    margin: 1% auto;
 }
 
 .items {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border: 2px solid #FF002B;
 }
 
 .items1 {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background-color: #0E0054;
 }

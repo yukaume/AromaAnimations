@@ -13,8 +13,8 @@ body {
 .gnItems {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
 }
 
@@ -29,7 +29,23 @@ body {
 .gnItems2 {
     position: absolute;
     margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.gnItems3 {
+    position: absolute;
+    margin: 0 auto;
     width: 32px;
     height: 32px;
+    border-radius: 50%;
+}
+
+.gnItems4 {
+    position: absolute;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
 }

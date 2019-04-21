@@ -4,8 +4,8 @@ body {
 
 #cinnammon {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 90%;
+    height: 100vh;
     background-color: #FFF7F5;
     margin: 5% auto;
 }
@@ -13,8 +13,8 @@ body {
 .items {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background-color: #B37059;
     border: 2px solid #802000;
     border-radius: 40%;
@@ -23,8 +23,8 @@ body {
 .items1 {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background-color: #EDAF9A;
     border: 1px solid #B37059;
     border-radius: 30%;

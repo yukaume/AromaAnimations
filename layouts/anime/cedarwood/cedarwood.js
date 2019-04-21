@@ -28,7 +28,7 @@ tl.add({
                 return anime.random(itemsWidth, wrapperWidth - itemsWidth);
             },
             translateY: function () {
-                return anime.random(itemsHeight * 2.5, wrapperHeight - itemsHeight * 2.5);
+                return anime.random(itemsHeight, wrapperHeight - itemsHeight);
             },
             opacity: [0.8, 0.8]
         },
@@ -96,12 +96,13 @@ tl.add({
         },
         scaleY: function () {
             return anime.random(1.5, 3.5)
-        }
+        },
+        endDelay: 100
     })
     .add({
         targets: '.items,.items1',
         easing: 'easeOutSine',
-        duration: 250,
+        duration: 350,
         skew: anime.stagger([-90, 90]),
         scale: 4
     }).add({

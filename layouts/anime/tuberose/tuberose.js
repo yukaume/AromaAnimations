@@ -1,11 +1,8 @@
 const tuberose = document.querySelector('#tuberose');
-tuberose.insertAdjacentHTML('afterbegin', htmlCreater('items', 30));
-tuberose.insertAdjacentHTML('afterbegin', htmlCreater('items1', 30));
-tuberose.insertAdjacentHTML('afterbegin', htmlCreater('items2', 30));
+tuberose.insertAdjacentHTML('afterbegin', htmlCreater('items', 40));
+tuberose.insertAdjacentHTML('afterbegin', htmlCreater('items1', 40));
 const items = document.querySelector('.items');
 const items1 = document.querySelector('.items1');
-const items2 = document.querySelector('.items2');
-const items3 = document.querySelector('.items3');
 const wrapperWidth = tuberose.clientWidth;
 const wrapperHeight = tuberose.clientHeight;
 const itemsWidth = items.clientWidth;
@@ -26,68 +23,51 @@ var tl = anime.timeline({
     loop: true
 });
 tl.add({
-            targets: '.items',
+            targets: '.items,.items1',
             duration: 0,
             easing: 'easeInQuart',
-            translateX: [
-                wrapperWidth / 2 - itemsWidth / 2,
-                wrapperWidth / 2 - itemsWidth / 2
-            ],
-            translateY: [
-                wrapperHeight / 2 - itemsHeight / 2,
-                wrapperHeight / 2 - itemsHeight / 2
-            ],
-            filter: ['blur(20px)', 'blur(10px)'],
-            scale: 2
-        },
-        0
-    )
-    .add({
-            targets: '.items1',
-            duration: 0,
-            easing: 'easeInQuart',
-            translateX: [
-                wrapperWidth / 2 - itemsWidth / 2,
-                wrapperWidth / 2 - itemsWidth / 2
-            ],
-            translateY: [
-                wrapperHeight / 2 - itemsHeight / 2,
-                wrapperHeight / 2 - itemsHeight / 2
-            ],
-            filter: ['blur(20px)', 'blur(10px)'],
-            scale: 2
+            translateX: function () {
+                return [anime.random(0, wrapperWidth), anime.random(0, wrapperWidth)];
+            },
+            translateY: function () {
+                return [anime.random(0, wrapperHeight), anime.random(0, wrapperHeight)];
+            },
+            scale: function () {
+                return anime.random(1, 3)
+            }
         },
         0
     )
     .add({
         targets: '.items,.items1',
-        duration: 1600,
-        easing: 'easeInExpo',
-        scale: 0.2
+        duration: 300,
+        easing: 'easeInCubic',
+        scale: 0
     })
     .add({
         targets: '.items,.items1',
-        duration: 1600,
-        translateX: function () {
-            return anime.random(0, wrapperWidth);
+        duration: 300,
+        easing: 'easeOutCubic',
+        scale: function () {
+            return anime.random(1, 3)
+        }
+    })
+    .add({
+        targets: '.items,.items1',
+        duration: 500,
+        easing: 'easeOutCubic',
+        scale: 0
+    })
+    .add({
+        targets: '.items,.items1',
+        duration: 2000,
+        easing: 'easeOutSine',
+        rotateZ: anime.stagger(15),
+        scale: function () {
+            return anime.random(1, 8)
         },
-        translateY: function () {
-            return anime.random(0, wrapperHeight);
-        },
-        scale: 0.5,
-        filter: 'blur(0px)'
+        opacity: {
+            value: 0,
+            delay: 300
+        }
     })
-    .add({
-        targets: '.items,.items1',
-        easing: 'easeInCirc',
-        duration: 800,
-        translateY: wrapperHeight - itemsHeight
-    })
-    .add({
-        targets: '.items,.items1',
-        easing: 'easeOutCirc',
-        duration: 400,
-        translateY: itemsHeight,
-        skew: 90,
-        opacity: 0
-    });

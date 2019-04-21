@@ -1,19 +1,19 @@
 body {
-    background-color: #FDFFE6;
+    background-color: #FEFFF5;
 }
 
 #magnolia {
     position: relative;
-    width: 80%;
-    height: 95vh;
-    background-color: #FDFFE6;
-    margin: 5% auto;
+    width: 100%;
+    height: 100vh;
+    background-color: #FEFFF5;
+    margin: 0% auto;
 }
 
 
 .guitems {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }

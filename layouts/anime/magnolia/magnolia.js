@@ -23,10 +23,10 @@ anime
             targets: '.guitems',
             easing: 'easeOutCubic',
             opacity: 0.8,
-            duration: 1200,
+            duration: 1600,
             background: 'linear-gradient(#FFFF73,#FFFFBF,#FFFFCC,#FFD9DC,#FF99A1)',
             translateX: [
-                wrapperWidth / 2 + itemsWidth * 2,
+                wrapperWidth / 2 + itemsWidth * 3,
                 wrapperWidth / 2 - itemsWidth * 2
             ],
             translateY: [
@@ -37,10 +37,10 @@ anime
             skewX: anime.stagger(0.3),
             skewY: anime.stagger(0.2),
             scale: function () {
-                return anime.random(4, 12);
+                return anime.random(1, 8);
             },
             borderRadius: '50%',
-            delay: anime.stagger(8)
+            delay: anime.stagger(7)
         },
         0
     )
@@ -50,18 +50,18 @@ anime
             duration: 1200,
             translateX: function () {
                 return anime.random(
-                    wrapperWidth / 2 + itemsWidth * 9,
-                    wrapperWidth / 2 - itemsWidth * 9
+                    wrapperWidth / 2 + itemsWidth * 12,
+                    wrapperWidth / 2 - itemsWidth * 12
                 );
             },
             translateY: function () {
                 return anime.random(
-                    wrapperHeight / 2 - itemsHeight * 9,
-                    wrapperHeight / 2 + itemsHeight * 9
+                    wrapperHeight / 2 - itemsHeight * 12,
+                    wrapperHeight / 2 + itemsHeight * 12
                 );
             },
             scale: function () {
-                return anime.random(4, 10);
+                return anime.random(1, 6);
             }
         },
         '-=300'
@@ -69,9 +69,9 @@ anime
     .add({
             targets: '.guitems',
             easing: 'easeOutCubic',
-            duration: 900,
+            duration: 1600,
             rotateZ: function () {
-                return anime.random(-540, 540);
+                return anime.random(-800, 800);
             },
             translateX: function () {
                 return anime.random(
@@ -86,15 +86,17 @@ anime
                 );
             }
         },
-        '-=150'
+        '-=100'
     )
     .add({
         targets: '.guitems',
         easing: 'easeOutCubic',
-        duration: 800,
-        scale: 14,
+        duration: 1200,
+        scale: function () {
+            return anime.random(5, 10);
+        },
         opacity: {
             value: 0,
-            delay: 650
+            delay: 800
         }
     });

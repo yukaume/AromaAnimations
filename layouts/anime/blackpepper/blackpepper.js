@@ -26,31 +26,21 @@ var tl = anime.timeline({
 });
 tl.add({
         targets: '.items,.items1',
-        duration: 100,
+        duration: 10,
         opacity: [0.8, 0.8],
-        translateX: [
-            wrapperWidth / 2 - itemsWidth / 2,
-            wrapperWidth / 2 - itemsWidth / 2
-        ],
-        translateY: [
-            wrapperHeight / 2 - itemsHeight / 2,
-            wrapperHeight / 2 - itemsHeight / 2
-        ],
-    })
-    .add({
-        targets: '.items,.items1',
-        duration: 1200,
-        scale: function () {
-            return anime.random(0.5, 6);
+        translateX: function () {
+            return [anime.random(0, wrapperWidth), anime.random(0, wrapperWidth)]
         },
-        skew: anime.stagger([-80, 80])
+        translateY: function () {
+            return [anime.random(0, wrapperHeight), anime.random(0, wrapperHeight)]
+        }
     })
     .add({
         targets: '.items,.items1',
-        duration: 1300,
+        duration: 800,
         easing: 'steps(5)',
         skew: 0,
-        scale: 0.5,
+        scale: anime.stagger([0.3, 1]),
         translateX: function () {
             return anime.random(0, wrapperWidth)
         },
@@ -60,12 +50,29 @@ tl.add({
     })
     .add({
         targets: '.items,.items1',
-        duration: 1200,
-        skew: [0, -30, 30, -30, 20, -30, 30, 0],
+        duration: 800,
+        easing: 'steps(5)',
+        skew: 0,
+        scale: 1,
+        translateX: function () {
+            return anime.random(0, wrapperWidth)
+        },
+        translateY: function () {
+            return anime.random(0, wrapperHeight)
+        }
+    })
+    .add({
+        targets: '.items,.items1',
+        duration: 1000,
+        skew: [0, -30, 20, -30, 30, 0],
         scale: 1
     })
     .add({
         targets: '.items,.items1',
-        duration: 200,
-        scale: [4, 0]
+        duration: 100,
+        scale: anime.stagger([2.5, 5])
+    }).add({
+        targets: '.items,.items1',
+        duration: 100,
+        scale: 0
     });

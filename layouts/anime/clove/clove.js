@@ -25,17 +25,17 @@ tl.add({
             opacity: [0.8, 0.8],
             translateX: function () {
                 return [
-                    anime.random(itemsWidth, wrapperWidth - itemsWidth),
-                    anime.random(itemsWidth, wrapperWidth - itemsWidth)
+                    anime.random(0, wrapperWidth - itemsWidth),
+                    anime.random(0, wrapperWidth - itemsWidth)
                 ];
             },
             translateY: function () {
                 return [
-                    anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                    anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                    anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                    anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
                 ];
             },
-            scale: anime.stagger([0.5, 0.7]),
+            scale: anime.stagger([0.5, 0.8]),
             background: 'linear-gradient(to top left,#4D3508,#997E4D,#E6CDA1,#997E4D,#4D3508)'
         },
         0
@@ -43,22 +43,22 @@ tl.add({
 
     .add({
         targets: '.items',
-        easing: 'easeInSine',
-        duration: 1500,
+        easing: 'steps(10)',
+        duration: 1200,
         opacity: [0.8, 0.8],
         translateX: function () {
             return [
-                anime.random(itemsWidth, wrapperWidth - itemsWidth),
-                anime.random(itemsWidth, wrapperWidth - itemsWidth)
+                anime.random(0, wrapperWidth - itemsWidth),
+                anime.random(0, wrapperWidth - itemsWidth)
             ];
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
-        scale: 3,
+        scale: 1.2,
         borderRadius: '50%'
     })
     .add({
@@ -67,17 +67,17 @@ tl.add({
         duration: 200,
         translateX: function () {
             return [
-                anime.random(itemsWidth, wrapperWidth - itemsWidth),
-                anime.random(itemsWidth, wrapperWidth - itemsWidth)
+                anime.random(0, wrapperWidth),
+                anime.random(0, wrapperWidth)
             ];
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
-        scale: 0.5
+        scale: 0.3
     })
     .add({
         targets: '.items',
@@ -85,14 +85,50 @@ tl.add({
         duration: 200,
         translateX: function () {
             return [
-                anime.random(itemsWidth, wrapperWidth - itemsWidth),
-                anime.random(itemsWidth, wrapperWidth - itemsWidth)
+                anime.random(0, wrapperWidth),
+                anime.random(0, wrapperWidth)
             ];
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
+            ];
+        },
+        scale: 1
+    })
+    .add({
+        targets: '.items',
+        easing: 'linear',
+        duration: 200,
+        translateX: function () {
+            return [
+                anime.random(0, wrapperWidth),
+                anime.random(0, wrapperWidth)
+            ];
+        },
+        translateY: function () {
+            return [
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
+            ];
+        },
+        scale: 0.3
+    })
+    .add({
+        targets: '.items',
+        easing: 'linear',
+        duration: 200,
+        translateX: function () {
+            return [
+                anime.random(0, wrapperWidth),
+                anime.random(0, wrapperWidth)
+            ];
+        },
+        translateY: function () {
+            return [
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
         scale: 1
@@ -109,16 +145,16 @@ tl.add({
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
-        scale: 0.5
+        scale: 0.3
     })
     .add({
         targets: '.items',
         easing: 'linear',
-        duration: 150,
+        duration: 200,
         translateX: function () {
             return [
                 anime.random(itemsWidth, wrapperWidth - itemsWidth),
@@ -127,8 +163,8 @@ tl.add({
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
         scale: 1
@@ -136,7 +172,7 @@ tl.add({
     .add({
         targets: '.items',
         easing: 'linear',
-        duration: 150,
+        duration: 200,
         translateX: function () {
             return [
                 anime.random(itemsWidth, wrapperWidth - itemsWidth),
@@ -145,11 +181,11 @@ tl.add({
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
-        scale: 0.5
+        scale: 0.2
     })
     .add({
         targets: '.items',
@@ -163,16 +199,16 @@ tl.add({
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
-        scale: 2
+        scale: 1.5
     })
     .add({
         targets: '.items',
         easing: 'linear',
-        duration: 800,
+        duration: 600,
         translateX: function () {
             return [
                 anime.random(itemsWidth, wrapperWidth - itemsWidth),
@@ -181,8 +217,8 @@ tl.add({
         },
         translateY: function () {
             return [
-                anime.random(itemsHeight, wrapperHeight - itemsHeight),
-                anime.random(itemsHeight, wrapperHeight - itemsHeight)
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2),
+                anime.random(itemsHeight / 2, wrapperHeight - itemsHeight * 2)
             ];
         },
         scale: 0

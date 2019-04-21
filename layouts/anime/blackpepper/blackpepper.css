@@ -4,8 +4,8 @@ body {
 
 #blackpepper {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 90%;
+    height: 100vh;
     background-color: #F2F2FF;
     margin: 5% auto;
 }
@@ -25,7 +25,6 @@ body {
     margin: 0 auto;
     width: 20px;
     height: 20px;
-    border: 1px solid #4D4D4D;
-    background-color: #B3B3B3;
+    background-color: #4D4D4D;
     border-radius: 50%;
 }

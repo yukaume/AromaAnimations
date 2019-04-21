@@ -48,16 +48,16 @@ anime
             delay: 100,
             opacity: [0.8, 0.8],
             translateX: [
-                wrapperWidth / 2 - itemsWidth * 7,
-                wrapperWidth / 2 - itemsWidth * 7
+                wrapperWidth / 6,
+                wrapperWidth / 6
             ],
             translateY: [
-                wrapperHeight / 2 - itemsWidth * 3,
-                wrapperHeight / 2 - itemsWidth * 3
+                wrapperHeight / 4,
+                wrapperHeight / 4
             ],
             easing: 'easeOutCubic',
             scale: function (el, i) {
-                return [0, i / 1.4];
+                return [0, i / 1.2];
             },
             rotateZ: function (el, i) {
                 return 0 + i * 35;
@@ -70,8 +70,8 @@ anime
             duration: 900,
             opacity: [0.8, 0.8],
             translateX: [
-                wrapperWidth / 2 + itemsWidth * 5,
-                wrapperWidth / 2 + itemsWidth * 5
+                wrapperWidth - wrapperWidth / 6,
+                wrapperWidth - wrapperWidth / 6
             ],
             translateY: [
                 wrapperHeight / 2 - itemsWidth,
@@ -92,16 +92,16 @@ anime
             duration: 900,
             opacity: [0.8, 0.8],
             translateX: [
-                wrapperWidth / 2 - itemsWidth * 4,
-                wrapperWidth / 2 - itemsWidth * 4
+                wrapperWidth / 2.3,
+                wrapperWidth / 2.3
             ],
             translateY: [
-                wrapperHeight / 2 + itemsWidth * 7,
-                wrapperHeight / 2 + itemsWidth * 7
+                wrapperHeight / 1.6,
+                wrapperHeight / 1.6
             ],
             easing: 'easeOutCubic',
             scale: function (el, i) {
-                return [0, i / 1.4];
+                return [0, i / 1.2];
             },
             rotateZ: function (el, i) {
                 return 0 + i * 40;

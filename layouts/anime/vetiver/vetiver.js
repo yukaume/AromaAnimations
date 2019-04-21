@@ -27,14 +27,15 @@ tl.add({
 
             duration: 1,
             translateX: function () {
-                return [anime.stagger([itemsWidth, wrapperWidth - itemsWidth]), anime.stagger([itemsWidth, wrapperWidth - itemsWidth])];
+                return [anime.stagger([0, wrapperWidth - itemsWidth]), anime.stagger([0, wrapperWidth - itemsWidth])];
             },
             translateY: function () {
-                return [anime.random(itemsHeight * 3, wrapperHeight - itemsHeight * 2.5), anime.random(itemsHeight * 3, wrapperHeight - itemsHeight * 2.5)];
+                return [anime.random(itemsHeight, wrapperHeight - itemsHeight), anime.random(itemsHeight, wrapperHeight - itemsHeight)];
             },
             opacity: [0, 0],
-            scale: anime.stagger([0.5, 1.5]),
-            skewY: [30, 30]
+            scale: anime.stagger([0.3, 2.5]),
+            rotateZ: anime.stagger([-90, 90]),
+            skewY: [35, 35]
         },
         0
     )
@@ -50,11 +51,12 @@ tl.add({
         easing: 'easeOutCubic',
         duration: 800,
         opacity: 0.8,
-        skewY: [30, -40, 30]
+        skewY: [30, -45, 30],
+        endDelay: 200
     }).add({
         targets: '.items,.items1',
         easing: 'easeInCubic',
-        duration: 1200,
+        duration: 1500,
         opacity: 0.8,
         scale: function () {
             return [anime.random(2.5, 4.5), anime.random(0.5, 0.8)]

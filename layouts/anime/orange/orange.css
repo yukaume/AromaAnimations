@@ -4,8 +4,8 @@ body {
 
 #orange {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 100%;
+    height: 100vh;
     background-color: #FFF8F5;
     margin: 5% auto;
 }

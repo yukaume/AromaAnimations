@@ -33,7 +33,7 @@ anime
             },
             background: 'linear-gradient(#EFD9FF,#D499FF,#EFD9FF)',
             rotateZ: 360,
-            opacity: [0.8, 0.7]
+            opacity: [0.9, 0.9]
         },
         0
     )
@@ -49,7 +49,7 @@ anime
             },
             background: 'linear-gradient(#FFC800,#FFE68C,#FFC800)',
             rotateZ: 360,
-            opacity: [0.7, 0.8]
+            opacity: [0.9, 0.9]
         },
         0
     )

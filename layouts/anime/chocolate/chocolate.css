@@ -4,10 +4,10 @@ body {
 
 #chocolate {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 90%;
+    height: 100vh;
     background-color: #FAF2ED;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 .items {

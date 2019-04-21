@@ -1,61 +1,56 @@
-const circleArr = [];
-var framecount = 0;
+const sandalwood = document.querySelector('#sandalwood');
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items', 30));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items1', 35));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items2', 30));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items3', 35));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items4', 30));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items5', 35));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items6', 30));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items7', 35));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items8', 30));
+sandalwood.insertAdjacentHTML('afterbegin', htmlCreater('items9', 35));
+const items = document.querySelector('.items');
+const items1 = document.querySelector('.items1');
+const items2 = document.querySelector('.items2');
+const items3 = document.querySelector('.items3');
+const items4 = document.querySelector('.items4');
+const items5 = document.querySelector('.items5');
+const items6 = document.querySelector('.items6');
+const items7 = document.querySelector('.items7');
+const items8 = document.querySelector('.items8');
+const items9 = document.querySelector('.items9');
+const wrapperWidth = sandalwood.clientWidth;
+const wrapperHeight = sandalwood.clientHeight;
+const itemsWidth = items.clientWidth;
+const itemsHeight = items.clientHeight;
+var countW = (wrapperWidth - itemsWidth * 4) / 3;
+var countH = wrapperHeight - itemsHeight;
 
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-}
-
-function draw() {
-    background('#fff');
-    framecount += 1;
-    for (let i = 0; i < circleArr.length; i++) {
-        circleArr[i].r += 0.1;
-        circleArr[i].angle += 1;
-        createCircleByDot(circleArr[i].length, circleArr[i].r, circleArr[i].o, circleArr[i].angle);
+function htmlCreater(className, number) {
+    let html = '';
+    for (let i = 0; i < number; i++) {
+        html += `<div class ="${className}"></div>`;
     }
-    if (framecount % 60 === 0) {
-        circleArr.push({
-            o: createVector(random(0, windowWidth), random(0, windowHeight)),
-            r: 0,
-            length: 10,
-            angle: 0,
-            life: 0,
-            life_limit: 10
-        })
-    }
+    return html;
 }
-
-// dotOnCircleは角度:angleとr:半径とo:原点の座標を受け取って円を描画する
-function dotOnCircle(angle, r, o) {
-    var x = cos(angle * PI / 180) * r + o.x
-    var y = sin(angle * PI / 180) * r + o.y
-    rect(x, y, 16, 16)
-}
-
-// createCircleByDotはドットの数:lengthと円の半径:rと円の中心の座標:oを受け取って
-// 半径rの円の円周上にlength個のドットを描画する
-function createCircleByDot(length, r, o, addAngle) {
-    var angle = 360 / length // ドットの個数からベースの角度を求める
-    for (let i = 0; i < length; i++) {
-        const _angle = angle * i + addAngle // ベースの角度にiをかけた値を算出する
-        dotOnCircle(_angle, r, o)
-    }
-}
-
-// function mouseClicked() {
-//     // createCircleByDotの第三引数はオブジェクトなのでcreateVectorして渡す
-//     // createCircleByDot(30, 100, createVector(mouseX, mouseY))
-//     circleArr.push({
-//         o: createVector(random(0, windowWidth), random(0, windowHeight)),
-//         r: 0,
-//         length: 10,
-//         angle: 0,
-//         life: 0,
-//         life_limit: 10
-//     })
-//     console.log(circleArr)
-// }
-
-function mouse() {
-
-}
+var tl = anime.timeline({
+    targets: '.items,.items1',
+    easing: 'easeOutSine',
+    loop: true
+});
+tl.add({
+        targets: '.items,.items1',
+        duration: 10,
+        translateX: function () {
+            return anime.random(0, wrapperWidth);
+        },
+        translateY: function () {
+            return anime.random(0, wrapperHeight);
+        },
+        opacity: [1, 1],
+        scale: function () {
+            return anime.random(0.5, 1.5)
+        }
+    },
+    0
+)

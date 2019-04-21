@@ -4,17 +4,17 @@ body {
 
 #sage {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 90%;
+    height: 100vh;
     background-color: #F9FFF5;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 .items {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border: 1.5px solid #C2FF99;
     background-color: #56A621;
 }

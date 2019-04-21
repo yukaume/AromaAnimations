@@ -1,10 +1,8 @@
 const blackcurrant = document.querySelector('#blackcurrant');
-blackcurrant.insertAdjacentHTML('afterbegin', htmlCreater('items', 45));
+blackcurrant.insertAdjacentHTML('afterbegin', htmlCreater('items', 50));
 blackcurrant.insertAdjacentHTML('afterbegin', htmlCreater('items1', 40));
 const items = document.querySelector('.items');
 const items1 = document.querySelector('.items1');
-const items2 = document.querySelector('.items2');
-const items3 = document.querySelector('.items3');
 const wrapperWidth = blackcurrant.clientWidth;
 const wrapperHeight = blackcurrant.clientHeight;
 const itemsWidth = items.clientWidth;
@@ -20,64 +18,63 @@ function htmlCreater(className, number) {
     return html;
 }
 var tl = anime.timeline({
+    targets: '.items,.items1',
+    opacity: [0.8, 0.8],
     loop: true
 });
 tl.add({
-            targets: '.items,.items1',
-            easing: 'easeOutSine',
-            duration: 0,
-            translateX: anime.stagger([0, wrapperWidth]),
-            translateY: anime.stagger([itemsHeight * 2, wrapperHeight - itemsHeight * 2]),
-            opacity: [0.6, 0.6],
-            scale: 2
+        targets: '.items,.items1',
+        easing: 'easeInQuad',
+        duration: 1,
+        translateX: function () {
+            return anime.random(0, wrapperWidth)
         },
-        0
-    )
-    .add({
-        targets: '.items,.items1',
-        easing: 'easeInQuad',
-        duration: 600,
-        translateX: anime.stagger([itemsWidth * 2, wrapperWidth - itemsWidth * 2]),
-        rotateZ: 360,
-        scale: 1
-    })
-    .add({
-        targets: '.items,.items1',
-        easing: 'easeInQuad',
-        duration: 800,
+        translateY: function () {
+            return anime.random(0, wrapperHeight);
+        },
         rotateZ: -360,
         borderRadius: '50%'
     })
     .add({
         targets: '.items,.items1',
-        delay: 200,
         easing: 'easeOutCirc',
-        duration: 800,
-        translateX: function () {
-            return anime.random(0, wrapperWidth)
-        },
-        translateY: function () {
-            return anime.random(0, wrapperHeight);
-        },
+        duration: 500,
         scale: 1
     })
     .add({
         targets: '.items,.items1',
-        delay: 200,
+        easing: 'easeInCirc',
+        duration: 400,
+        scale: 5
+    }).add({
+        targets: '.items,.items1',
         easing: 'easeOutCirc',
-        duration: 800,
-        translateX: function () {
-            return anime.random(0, wrapperWidth)
-        },
-        translateY: function () {
-            return anime.random(0, wrapperHeight);
-        },
-        scale: 0.6
+        duration: 500,
+        scale: 1
     })
     .add({
         targets: '.items,.items1',
-        delay: 200,
+        easing: 'easeInCirc',
+        duration: 800,
+        skew: [0, 40, -40, 0],
+        scale: 4
+    })
+    .add({
+        targets: '.items,.items1',
         easing: 'easeOutCirc',
-        duration: 600,
-        scale: [3, 0]
-    });
+        duration: 500,
+        scale: 1
+    })
+    .add({
+        targets: '.items,.items1',
+        easing: 'easeInCirc',
+        duration: 800,
+        skew: [0, 80, -80, 0],
+        scale: 4
+    })
+    .add({
+        targets: '.items,.items1',
+        easing: 'easeOutCirc',
+        duration: 700,
+        scale: 1
+    })

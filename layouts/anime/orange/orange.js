@@ -1,5 +1,5 @@
 const orange = document.querySelector('#orange');
-orange.insertAdjacentHTML('afterbegin', htmlCreater('items', 40));
+orange.insertAdjacentHTML('afterbegin', htmlCreater('items', 50));
 orange.insertAdjacentHTML('afterbegin', htmlCreater('items1', 50));
 const items = document.querySelector('.items');
 const items1 = document.querySelector('.items1');
@@ -34,12 +34,12 @@ tl.add({
             translateX: function (el, i, len) {
                 const angle = (360 / len) * i;
                 const radian = Math.PI / 180;
-                return Math.sin(angle * radian) * 15;
+                return Math.sin(angle * radian) * wrapperWidth / 2;
             },
             translateY: function (el, i, len) {
                 const angle = (360 / len) * i;
                 const radian = Math.PI / 180;
-                return Math.cos(angle * radian) * 15;
+                return Math.cos(angle * radian) * wrapperHeight / 2;
             },
             opacity: [0, 0]
         },
@@ -55,12 +55,12 @@ tl.add({
             translateX: function (el, i, len) {
                 const angle = (360 / len) * i;
                 const radian = Math.PI / 180;
-                return Math.sin(angle * radian) * 15;
+                return Math.sin(angle * radian) * wrapperWidth / 2;
             },
             translateY: function (el, i, len) {
                 const angle = (360 / len) * i;
                 const radian = Math.PI / 180;
-                return Math.cos(angle * radian) * 15;
+                return Math.cos(angle * radian) * wrapperHeight / 2;
             },
             opacity: [0, 0]
         },
@@ -71,15 +71,15 @@ tl.add({
         duration: 1000,
         opacity: [0.8, 0.8],
         right: [
-            wrapperWidth / 2 - itemsWidth * 3,
-            wrapperWidth / 2 + itemsWidth * 3
+            wrapperWidth / 2 - itemsWidth * 4,
+            wrapperWidth / 2 + itemsWidth * 4
         ],
         bottom: [
             wrapperHeight / 2 - itemsHeight * 3,
-            wrapperHeight / 2 + itemsHeight * 3
+            wrapperHeight / 2 + itemsHeight * 4
         ],
         scale: function () {
-            return anime.random(0.5, 5)
+            return anime.random(0.5, 4)
         },
         rotateY: 540
     })
@@ -88,15 +88,15 @@ tl.add({
         duration: 1000,
         opacity: [1, 1],
         right: [
-            wrapperWidth / 2 - itemsWidth * 3,
-            wrapperWidth / 2 + itemsWidth * 3
+            wrapperWidth / 2 - itemsWidth * 4,
+            wrapperWidth / 2 + itemsWidth * 4
         ],
         bottom: [
             wrapperHeight / 2 - itemsHeight * 3,
-            wrapperHeight / 2 + itemsHeight * 3
+            wrapperHeight / 2 + itemsHeight * 4
         ],
         scale: function () {
-            return anime.random(0.5, 5)
+            return anime.random(0.5, 4)
         },
         rotateY: 540,
         zIndex: [1, 1]
@@ -113,7 +113,7 @@ tl.add({
             return anime.random(-30, 30);
         },
         scale: function () {
-            return anime.random(0.5, 6)
+            return anime.random(0.5, 5)
         },
         rotateZ: 2000
     })

@@ -1,32 +1,32 @@
 body {
-    background-color: #FEFFF2;
+    background-color: #FFFEF7;
 }
 
 #tuberose {
     position: relative;
-    width: 80%;
-    height: 95vh;
-    background-color: #FEFFF2;
-    margin: 5% auto;
+    width: 95%;
+    height: 100vh;
+    background-color: #FFFEF7;
+    margin: 1% auto;
 }
 
 
 .items {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
-    border: 0.5px solid #EEFF00;
-    background-color: #FFECA6;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #FFEA00;
+    background-color: #FFF7CC;
     border-radius: 40%;
 }
 
 .items1 {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
-    border: 0.5px solid #FFD84D;
-    background-color: #F9FFA6;
-    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #FFC34D;
+    background-color: #FFEACC;
+    border-radius: 40%;
 }

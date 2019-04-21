@@ -69,8 +69,15 @@ tl.add({
     .add({
         targets: '.items',
         rotateZ: 540,
-        duration: 1000,
+        duration: 800,
+        scale: 10,
+        borderWidth: [1, 7]
+    })
+    .add({
+        targets: '.items',
+        rotateZ: -580,
+        duration: 800,
         opacity: [1, 0],
-        scale: [10, 0],
+        scale: 0,
         borderWidth: [1, 7]
     });

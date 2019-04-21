@@ -1,7 +1,7 @@
 const chocolate = document.querySelector('#chocolate');
 chocolate.insertAdjacentHTML('afterbegin', htmlCreater('items', 30));
-chocolate.insertAdjacentHTML('afterbegin', htmlCreater('items1', 25));
-chocolate.insertAdjacentHTML('afterbegin', htmlCreater('items2', 20));
+chocolate.insertAdjacentHTML('afterbegin', htmlCreater('items1', 40));
+chocolate.insertAdjacentHTML('afterbegin', htmlCreater('items2', 30));
 const items = document.querySelector('.items');
 const items1 = document.querySelector('.items1');
 const items2 = document.querySelector('.items2');
@@ -37,21 +37,21 @@ tl.add({
                 wrapperHeight / 2 - itemsHeight / 2,
                 wrapperHeight / 2 - itemsHeight / 2
             ],
-            scale: [7, 7]
+            scale: [2, 2]
         },
         0
     )
     .add({
         targets: '.items,.items1,.items2',
-        duration: 1000,
-        easing: 'easeInQuint',
+        duration: 800,
+        easing: 'easeInCubic',
         scale: 0
     })
     .add({
         targets: '.items,.items1,.items2',
         easing: 'easeOutQuint',
-        duration: 2500,
-        scale: 3,
+        duration: 1600,
+        scale: 2,
         translateX: function () {
             return anime.random(0, wrapperWidth);
         },
@@ -63,15 +63,15 @@ tl.add({
             targets: '.items,.items1,.items2',
             duration: 1000,
             scale: function () {
-                return anime.random(0.5, 6)
+                return anime.random(0.3, 2.5)
             },
             skewX: [50, -50, 50, -50, 50, -50, 50, -50, 40, -40, 40, -40, 30, -30, 30, -30, 0]
         },
-        '-=900'
+        '-=800'
     )
     .add({
         targets: '.items,.items1,.items2',
         easing: 'easeOutQuint',
-        duration: 800,
-        scale: [2, 5, 0]
+        duration: 1200,
+        scale: [1, 5, 0]
     });

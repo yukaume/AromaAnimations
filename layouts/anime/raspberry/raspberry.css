@@ -4,26 +4,26 @@ body {
 
 #raspberry {
     position: relative;
-    width: 80%;
-    height: 95vh;
+    width: 95%;
+    height: 100vh;
     background-color: #FFF8F7;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 .items {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
-    border: 1px solid #D90B00;
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid #990800;
     background-color: #F2A29D;
 }
 
 .items1 {
     position: absolute;
     margin: 0 auto;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border: 1px solid #F2A29D;
     background-color: #FFDBD9;
     border-radius: 50%;
@@ -32,9 +32,9 @@ body {
 .items2 {
     position: absolute;
     margin: 0 auto;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border: 1, 5px solid #FFDBD9;
     background-color: #D90B00;
-    border-radius: 30%;
+    border-radius: 50%;
 }

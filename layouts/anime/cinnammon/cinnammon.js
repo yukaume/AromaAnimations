@@ -26,22 +26,14 @@ tl.add({
             targets: '.items,.items1',
             duration: 800,
             easing: 'easeOutCubic',
-            // translateX: [
-            //     wrapperWidth / 2 - itemsWidth / 2,
-            //     wrapperWidth / 2 - itemsWidth / 2
-            // ],
-            // translateY: [
-            //     wrapperHeight / 2 - itemsHeight / 2,
-            //     wrapperHeight / 2 - itemsHeight / 2
-            // ],
             translateX: function () {
-                return [anime.random(itemsWidth * 3, wrapperWidth - itemsWidth * 3), anime.random(itemsWidth * 3, wrapperWidth - itemsWidth * 3)]
+                return [anime.random(itemsWidth, wrapperWidth - itemsWidth), anime.random(itemsWidth, wrapperWidth - itemsWidth)]
             },
             translateY: function () {
                 return [anime.random(itemsHeight, wrapperHeight), anime.random(itemsHeight, wrapperHeight)]
             },
             scale: function () {
-                return [anime.random(0, 0), anime.random(0.3, 2.5)]
+                return [anime.random(0, 0), anime.random(0.3, 2)]
             },
             opacity: [0.8, 0.8],
             delay: anime.stagger(6),
@@ -51,15 +43,15 @@ tl.add({
         targets: '.items,.items1',
         duration: 800,
         delay: anime.stagger(6),
-        easing: 'easeInCubic',
+        easing: 'easeInSine',
         translateX: function () {
             return anime.random(itemsWidth, wrapperWidth - itemsWidth)
         },
         translateY: function () {
-            return anime.random(itemsHeight * 3, wrapperHeight - itemsHeight * 3)
+            return anime.random(itemsHeight, wrapperHeight - itemsHeight)
         },
         scale: function () {
-            return anime.random(1, 6)
+            return anime.random(0.5, 2.5)
         },
         rotateZ: 540
     }, '-=150')
@@ -67,12 +59,12 @@ tl.add({
         targets: '.items,.items1',
         duration: 800,
         delay: anime.stagger(6),
-        easing: 'easeOutCubic',
+        easing: 'easeInSine',
         translateX: function () {
             return anime.random(itemsWidth, wrapperWidth - itemsWidth)
         },
         translateY: function () {
-            return anime.random(itemsHeight * 3, wrapperHeight - itemsHeight * 3)
+            return anime.random(itemsHeight, wrapperHeight - itemsHeight)
         },
         scale: function () {
             return anime.random(0.1, 1)
@@ -88,7 +80,7 @@ tl.add({
             return anime.random(itemsWidth, wrapperWidth - itemsWidth)
         },
         translateY: function () {
-            return anime.random(itemsHeight * 3, wrapperHeight - itemsHeight * 3)
+            return anime.random(itemsHeight, wrapperHeight - itemsHeight)
         },
         scale: 0,
         rotateZ: -540
